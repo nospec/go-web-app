@@ -29,5 +29,6 @@ func main() {
 		}
 	})
 	fmt.Println("Listening")
-	fmt.Println(http.ListenAndServe(":8080", nil))
+	//fmt.Println(http.ListenAndServe(":80", nil))
+	fmt.Println(http.ListenAndServeTLS(":443", "cert.pem", "server.key", nil))
 }
